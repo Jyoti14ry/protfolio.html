@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jyoti Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #021302;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 60px;
+            background: #e76eb9;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: black;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* HERO SECTION */
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 80px 60px;
+        }
+
+        .leftsection {
+            width: 50%;
+        }
+
+        .leftsection h2 {
+            font-size: 2.5rem;
+        }
+
+        .purple {
+            color: #a855f7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #a855f7;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #7e22ce;
+        }
+
+        .rightsection img {
+            width: 260px;
+            border-radius: 12px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #0f5132;
+            margin: 40px 80px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 60px 80px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        /* CARDS */
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #1f1f1f;
+        }
+
+        /* FORM */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background: #e76eb9;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c94c9b;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .leftsection {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Jyoti Portfolio</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="firstsection" id="home">
+        <div class="leftsection">
+            <h2>Hi, My name is <span class="purple">Jyoti</span></h2>
+            <p>I am a Web Developer</p>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="rightsection">
+            <img src="image1.jpeg" alt="profile">
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="card-container">
+            <div class="card">
+                <h3>Fire Alarm Detection</h3>
+                <p>AI-based project using deep learning for threat detection.</p>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>Responsive portfolio using HTML & CSS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a Computer Science student with experience in web development and software testing.
+            I have completed an internship and worked on AI-based object detection projects.
+        </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2>Services</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Modern responsive websites using HTML, CSS, JS.</p>
+            </div>
+
+            <div class="card">
+                <h3>Software Testing</h3>
+                <p>Manual testing, bug reporting, and QA processes.</p>
+            </div>
+            <div class="card">
+                <h3>Graphic Designer</h3>
+                <p>I create simple and clean designs using Canva.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Jyoti Portfolio | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
